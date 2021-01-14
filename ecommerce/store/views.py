@@ -19,9 +19,15 @@ def loginPage(request):
 		if user is not None:
 			login(request,user)
 			return redirect('store')
+		else:
+			messages.info(request,'Username OR Password is incorrect')
 
 	context = {}
 	return render(request, 'store/login.html', context)
+
+def logoutUser(request):
+	logout(request)
+	return redirect('login')
 
 def registerPage(request):
 	form = CreateUserForm()
