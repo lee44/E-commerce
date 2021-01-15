@@ -54,11 +54,13 @@
      </head>
      <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <!-- .navbar-brand is for company, product, project name -->
             <a class="navbar-brand" href="{% url 'store' %}">Ecom</a>
+            <!-- navbar-toggler used to collapse nav bar menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-      
+            <!-- Everything inside this div will be put inside the navbar toggler when the breakpoint is reached -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -66,9 +68,8 @@
                 </li>
               </ul>
 
-              <form class="form-inline m-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                 
+              <form class="form-inline m-auto" method="GET" action="{% url 'search' %}">
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
                 <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
               </form>
 

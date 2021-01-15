@@ -48,6 +48,17 @@ def registerPage(request):
 		context = {'form':form}
 		return render(request, 'store/register.html', context)
 
+def search(request):
+	if request.method == 'GET':
+		search_string = request.GET.get('search').strip()
+		data = cartData(request)
+		cartItems = data['cartItems']
+		order = data['order']
+		items = data['items']
+		products = Product.objects.all().filter(name__icontains=search_string)
+		context = {'products':products,'cartItems':cartItems,'shipping':False}
+		return render(request, 'store/store.html',context)
+
 def store(request):
 	data = cartData(request)
 	cartItems = data['cartItems']
