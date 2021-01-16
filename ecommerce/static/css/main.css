@@ -39,7 +39,7 @@ p{
 }
 
 #cart-icon{
-	width:25px;
+	width:35px;
 	display: inline-block;
 	margin-left: 15px;
 }
@@ -84,8 +84,6 @@ p{
 	display: inline-block;
 	font-weight: 700;
 	padding-right:10px;
-	
-
 }
 
 .chg-quantity{
@@ -107,4 +105,18 @@ p{
 
 .table{
     margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+	.nav-item {
+	  margin: 10px 0px 0px 0px;
+	}
+	li {
+		justify-content: flex-end;
+	}
+  }
+
+li {
+    display: flex;
+    align-items: center;
 }
