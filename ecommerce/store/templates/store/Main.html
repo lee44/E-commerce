@@ -77,10 +77,8 @@
                 <li class="nav-item">
                   {% if user.is_authenticated %}
                   <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle mr-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Hello, {{user.username}}
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button class="btn btn-primary mr-2">Hello, {{user.username}}</button>
+                    <div class="dropdown-content">
                       <a class="dropdown-item" href="#">Orders</a>
                       <a class="dropdown-item" href="#">Profile</a>
                       <a class="dropdown-item" href="{% url 'logout' %}" id="login_button">Logout</a>
