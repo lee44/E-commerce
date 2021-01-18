@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
+<div class="row" style="min-width: 480px;">
     {% for product in products %}
     <div class="col-lg-4 col-md-6">
         <img class="thumbnail" src="{{ product.imageURL }}">
