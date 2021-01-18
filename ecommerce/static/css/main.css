@@ -35,7 +35,7 @@ p{
 }
 
 .bg-dark{
-	background-color: #202020!important;
+	background-color: #000130!important;
 }
 
 #cart-icon{
@@ -155,4 +155,8 @@ display: block;
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .btn {
 	background-color: #3e8e41;
+}
+
+#cart_icon:hover{
+	background-color:#4e4e4e
 }
