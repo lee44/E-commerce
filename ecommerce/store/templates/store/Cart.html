@@ -9,8 +9,8 @@
             <a class="btn btn-success" style="margin:5px; float:right" href="{% url 'checkout' %}">Checkout</a>
             <table class="table">
                 <tr>
-                    <th class="align-middle"><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
-                    <th class="align-middle"><h5>Total: <strong>${{order.get_cart_total|floatformat:2}}</strong></h5></th>
+                    <th class="align-middle"><h5 style="text-align:center;">Items: <strong>{{order.get_cart_items}}</strong></h5></th>
+                    <th class="align-middle"><h5 style="text-align:center;">Total: <strong>${{order.get_cart_total|floatformat:2}}</strong></h5></th>
                 </tr>
             </table>
         </div>
@@ -18,8 +18,8 @@
         <br>
         <div class="box-element">
             <div class="cart-row">
-                <div style="flex:2"></div>
                 <div style="flex:2;text-align:center;"><strong>Item</strong></div>
+                <div style="flex:2;text-align:center;"><strong>Name</strong></div>
                 <div style="flex:1;text-align:center;"><strong>Price</strong></div>
                 <div style="flex:1;text-align:center;"><strong>Quantity</strong></div>
                 <div style="flex:1;text-align:center;"><strong>Total</strong></div>
